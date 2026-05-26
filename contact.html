@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact — Book a Demo or Consultation | Miraio</title><meta name="theme-color" content="#0f0d0b">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Miraio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="Contact Miraio to book a product demo, inquire about custom AI development, or get help with our products.">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.contact-info-item{display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:10px}
+.contact-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(--red-dim)}
+.faq-mini{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:6px}
+.faq-mini-q{padding:14px 16px;font-size:13px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;color:var(--text)}
+.faq-mini-a{padding:0 16px 14px;font-size:13px;color:var(--text2);line-height:1.65;display:none}
+.faq-mini.open .faq-mini-a{display:block}
+.faq-mini.open .faq-arr{transform:rotate(45deg)}
+</style>
+<meta property="og:title" content="Contact — Book a Demo or Consultation | Miraio">
+<meta property="og:description" content="Contact Miraio to book a free product demo, ask about custom AI development, or get support. We reply within 24 hours on business days.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:48px 0">
+  <div class="container" style="max-width:760px;text-align:center">
+    <span class="section-eyebrow en-i">Get in touch</span>
+    <span class="section-eyebrow ja-i">お問い合わせ</span>
+    <h1 class="en" id="ct-h1-en" style="margin-bottom:12px">Let's talk about your AI needs</h1>
+    <h1 class="ja" id="ct-h1-ja" style="margin-bottom:12px">AIのニーズについて話しましょう</h1>
+    <p class="en" id="ct-sub-en">Book a free demo, ask about our products, or inquire about custom AI development. We reply within 24 hours on business days.</p>
+    <p class="ja" id="ct-sub-ja">無料デモの予約、製品についての質問、カスタムAI開発のご相談。営業日24時間以内に返信します。</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:48px">
+      <!-- LEFT: Info -->
+      <div>
+        <h3 class="en" style="margin-bottom:20px">Contact information</h3>
+        <h3 class="ja" style="margin-bottom:20px">連絡先情報</h3>
+        <div class="contact-info-item">
+          <div class="contact-icon">📧</div>
+          <div><p style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:3px">Email</p><a href="mailto:hello@miraio.com" style="font-size:14px;color:var(--text2)">hello@miraio.com</a></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div><p style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:3px"><span class="en-i">Location</span><span class="ja-i">所在地</span></p><p style="font-size:14px;color:var(--text2)">Ho Chi Minh City, Vietnam<br>Tokyo, Japan (partner office)</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">⏰</div>
+          <div><p style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:3px"><span class="en-i">Response time</span><span class="ja-i">返信時間</span></p><p style="font-size:14px;color:var(--text2)" class="en">Within 24 hours (business days)<br>Urgent: same day</p><p style="font-size:14px;color:var(--text2)" class="ja">営業日24時間以内<br>緊急：当日対応</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🌐</div>
+          <div><p style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:700;margin-bottom:3px"><span class="en-i">Languages</span><span class="ja-i">対応言語</span></p><p style="font-size:14px;color:var(--text2)">English · 日本語 · Tiếng Việt</p></div>
+        </div>
+
+        <h3 class="en" style="margin:28px 0 14px">Common questions</h3>
+        <h3 class="ja" style="margin:28px 0 14px">よくある質問</h3>
+        <div id="ct-faq-list"><div class="faq-mini" onclick="this.classList.toggle('open')">
+          <div class="faq-mini-q"><span class="en-i">Do you offer refunds?</span><span class="ja-i">返金対応はありますか？</span><span class="faq-arr" style="transition:transform .2s;color:var(--text3)">+</span></div>
+          <div class="faq-mini-a"><span class="en-i">Yes — 30-day money-back guarantee on all products. No questions asked.</span><span class="ja-i">はい — 全製品に30日間返金保証があります。理由は問いません。</span></div>
+        </div>
+        <div class="faq-mini" onclick="this.classList.toggle('open')">
+          <div class="faq-mini-q"><span class="en-i">How long does a demo take?</span><span class="ja-i">デモはどのくらいかかりますか？</span><span class="faq-arr" style="transition:transform .2s;color:var(--text3)">+</span></div>
+          <div class="faq-mini-a"><span class="en-i">Product demos are 30 minutes. Custom solution scoping calls are 45-60 minutes.</span><span class="ja-i">製品デモは30分。カスタムソリューションのスコープコールは45〜60分です。</span></div>
+        </div>
+        <div class="faq-mini" onclick="this.classList.toggle('open')">
+          <div class="faq-mini-q"><span class="en-i">Do you work with enterprise clients?</span><span class="ja-i">エンタープライズクライアントとも協力しますか？</span><span class="faq-arr" style="transition:transform .2s;color:var(--text3)">+</span></div>
+          <div class="faq-mini-a"><span class="en-i">Yes. We have an Enterprise tier with white-labeling, custom agents, and priority support. Contact us to discuss.</span><span class="ja-i">はい。ホワイトラベル、カスタムエージェント、優先サポートを含むEnterpriseプランがあります。ご相談ください。</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:36px">
+          <h3 class="en" style="margin-bottom:6px">Send us a message</h3>
+          <h3 class="ja" style="margin-bottom:6px">メッセージを送る</h3>
+          <p style="font-size:13px;color:var(--text3);margin-bottom:24px" class="en">Fill out the form and we'll get back to you within 24 hours.</p>
+          <p style="font-size:13px;color:var(--text3);margin-bottom:24px" class="ja">フォームに記入いただくと、24時間以内にご返信します。</p>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label en-i">Your name *</label>
+                <label class="form-label ja-i">お名前 *</label>
+                <input type="text" name="name" class="form-input" required placeholder="John Smith">
+              </div>
+              <div class="form-group">
+                <label class="form-label en-i">Email *</label>
+                <label class="form-label ja-i">メールアドレス *</label>
+                <input type="email" name="email" class="form-input" required placeholder="you@company.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label en-i">Company / Organization</label>
+              <label class="form-label ja-i">会社名・組織名</label>
+              <input type="text" name="company" class="form-input" placeholder="Acme Corp / フリーランス">
+            </div>
+            <div class="form-group">
+              <label class="form-label en-i">Inquiry type *</label>
+              <label class="form-label ja-i">お問い合わせ種別 *</label>
+              <select name="type" id="ct-inquiry-select" class="form-select" required>
+                <option value="" disabled selected><span class="en-i">Select a topic</span></option>
+                <option value="demo"><span class="en-i">Book a product demo</span></option>
+                <option value="product-discussion"><span class="en-i">Product discussion</span></option>
+                <option value="purchase"><span class="en-i">Purchase / pricing question</span></option>
+                <option value="custom"><span class="en-i">Custom AI development</span></option>
+                <option value="support"><span class="en-i">Product support</span></option>
+                <option value="partnership"><span class="en-i">Partnership / affiliate</span></option>
+                <option value="other"><span class="en-i">Other</span></option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label en-i">Product interest</label>
+              <label class="form-label ja-i">興味のある製品</label>
+              <select name="product" class="form-select">
+                <option value="">Not product-specific</option>
+                <option value="solo-business-ai">Solo Business AI</option>
+                <option value="japan-dx">Japan DX Analyzer</option>
+                <option value="ai-impact">AI Impact Dashboard</option>
+                <option value="morning-brief">Morning Briefing Agent</option>
+                <option value="custom">Custom Solution</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label en-i">Message *</label>
+              <label class="form-label ja-i">メッセージ *</label>
+              <textarea name="message" class="form-textarea" required placeholder="Tell us about your use case, team size, and what you're trying to achieve..." style="min-height:120px"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label en-i">Preferred contact language</label>
+              <label class="form-label ja-i">希望言語</label>
+              <select name="language" class="form-select">
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+                <option value="vi">Tiếng Việt</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              <span class="en-i">Send message →</span>
+              <span class="ja-i">送信 →</span>
+            </button>
+            <p style="font-size:11px;color:var(--text3);text-align:center;margin-top:12px" class="en">We respect your privacy. Your information is never shared.</p>
+            <p style="font-size:11px;color:var(--text3);text-align:center;margin-top:12px" class="ja">プライバシーを尊重します。情報は共有されません。</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="assets/app.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script>
+(function applyContactPage() {
+  var d; try { d = JSON.parse(localStorage.getItem('miraio_contact_page') || 'null') || {}; } catch(e) { d = {}; }
+  function tx(id,v){ if(!v) return; var el=document.getElementById(id); if(el) el.textContent=v; }
+  function ih(id,v){ if(!v) return; var el=document.getElementById(id); if(el) el.innerHTML=v; }
+  tx('ct-h1-en', d.h1_en);
+  tx('ct-h1-ja', d.h1_ja);
+  tx('ct-sub-en', d.sub_en);
+  tx('ct-sub-ja', d.sub_ja);
+  tx('ct-langs', d.langs);
+  if (d.email) {
+    var el = document.getElementById('ct-email-link');
+    if (el) { el.href = 'mailto:' + d.email; el.textContent = d.email; }
+  }
+  ih('ct-location-en', (d.location_en || '').replace(/
+/g,'<br>'));
+  ih('ct-resp-en', (d.response_en || '').replace(/
+/g,'<br>'));
+  // FAQ (if custom)
+  var faq = Array.isArray(d.faq) ? d.faq : [];
+  if (faq.length) {
+    var list = document.getElementById('ct-faq-list');
+    if (list) list.innerHTML = faq.map(function(f) {
+      return '<div class="faq-mini" onclick="this.classList.toggle('open')">' +
+        '<div class="faq-mini-q">' + (f.q_en || f.q || '') + '<span class="faq-arr" style="transition:transform .2s;color:var(--text3)">+</span></div>' +
+        '<div class="faq-mini-a">' + (f.a_en || f.a || '') + '</div>' +
+      '</div>';
+    }).join('');
+  }
+  // Inquiry types (if custom pipe-separated lines: "value|label")
+  if (d.inquiry_types) {
+    var sel = document.getElementById('ct-inquiry-select');
+    if (sel) {
+      var lines = d.inquiry_types.split('
+').filter(function(l){ return l.trim(); });
+      sel.innerHTML = '<option value="" disabled selected>Select a topic</option>' +
+        lines.map(function(l) {
+          var parts = l.split('|'); var val = parts[0].trim(); var lbl = (parts[1]||val).trim();
+          return '<option value="' + val + '">' + lbl + '</option>';
+        }).join('');
+    }
+  }
+})();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    Store.addInquiry(data);
+    showToast(currentLang === 'ja' ? 'メッセージを送信しました！24時間以内に返信します。' : 'Message sent! We\'ll reply within 24 hours.', 'success');
+    form.reset();
+  });
+});
+</script>
+</body>
+</html>

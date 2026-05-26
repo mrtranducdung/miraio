@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Product — Miraio</title>
+<meta name="description" content="AI product detail — Miraio">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+
+/* ── QUICK FACTS SIDEBAR ───────────────────────────────── */
+.pd-facts-card {
+  background:var(--card);
+  border:1.5px solid var(--border2);
+  border-radius:var(--r-xl);
+  overflow:hidden;
+  box-shadow:var(--s2);
+}
+.pd-facts-header {
+  background:var(--bg2);
+  padding:14px 20px;
+  border-bottom:1px solid var(--border);
+  font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; color:var(--text3);
+}
+.pd-facts-body { padding:0 20px; }
+.pd-fact-row {
+  display:flex; justify-content:space-between; align-items:baseline;
+  padding:11px 0; border-bottom:1px solid var(--border); font-size:13px;
+}
+.pd-fact-row:last-child { border-bottom:none; }
+.pd-fact-label { color:var(--text3); font-weight:500; flex-shrink:0; }
+.pd-fact-val { color:var(--text); font-weight:700; text-align:right; max-width:58%; line-height:1.4; }
+.pd-facts-footer {
+  padding:16px 20px;
+  border-top:1px solid var(--border);
+  display:flex; flex-direction:column; gap:8px;
+}
+
+/* ── FEATURES LIST ─────────────────────────────────────── */
+.feat-item {
+  display:flex; align-items:flex-start; gap:10px;
+  padding:12px 14px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  transition:border-color .15s, box-shadow .15s;
+}
+.feat-item:hover { border-color:var(--border2); box-shadow:var(--s1); }
+.feat-check {
+  width:20px; height:20px; border-radius:50%; flex-shrink:0;
+  background:var(--red-dim); border:1px solid var(--red-border);
+  display:flex; align-items:center; justify-content:center;
+  font-size:9px; font-weight:800; color:var(--red); margin-top:1px;
+}
+.feat-text { font-size:13px; color:var(--text2); line-height:1.5; font-weight:500; }
+
+/* ── TECH PILLS ────────────────────────────────────────── */
+.pd-tech-pill {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; font-weight:600;
+  padding:7px 14px; border-radius:var(--r);
+  background:var(--card); border:1.5px solid var(--border2); color:var(--text);
+  box-shadow:var(--s1);
+}
+
+/* ── TAG PILLS ─────────────────────────────────────────── */
+.pd-tag-item {
+  font-size:11px; padding:3px 10px; border-radius:20px;
+  background:var(--bg3); color:var(--text3); font-weight:600;
+}
+
+/* ── SECTION LABELS ────────────────────────────────────── */
+.pd-sec-label {
+  font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px;
+  color:var(--red); margin-bottom:8px; display:block;
+}
+.pd-sec-title {
+  font-size:clamp(17px,2.2vw,22px); font-weight:800; letter-spacing:-.5px;
+  color:var(--text); margin-bottom:18px; line-height:1.25;
+}
+
+/* ── RELATED CARDS ─────────────────────────────────────── */
+.other-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.other-card {
+  background:var(--card); border:1px solid var(--border2);
+  border-radius:var(--r-xl); overflow:hidden; display:flex; flex-direction:column;
+  transition:box-shadow .2s, transform .2s;
+}
+.other-card:hover { box-shadow:var(--s3); transform:translateY(-3px); }
+.other-card-header { padding:20px 20px 14px; position:relative; }
+.other-card-icon { font-size:28px; display:block; margin-bottom:10px; }
+.other-card-cat { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.7px; color:var(--red); margin-bottom:4px; }
+.other-card-name { font-size:15px; font-weight:800; letter-spacing:-.3px; color:var(--text); margin-bottom:5px; }
+.other-card-desc { font-size:12px; color:var(--text3); line-height:1.6; }
+.other-card-footer {
+  padding:12px 20px 16px; margin-top:auto;
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid var(--border);
+}
+
+/* ── CTA BANNER ────────────────────────────────────────── */
+.pd-cta-banner { background:var(--dark); padding:72px 0; }
+.pd-cta-inner { text-align:center; max-width:580px; margin:0 auto; }
+.pd-cta-banner h2 { color:#FAF9F7; margin-bottom:12px; letter-spacing:-.8px; }
+.pd-cta-banner p { color:#78716C; font-size:15px; margin-bottom:28px; line-height:1.7; }
+.pd-cta-btn-light {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 28px; border-radius:var(--r);
+  background:#fff; color:var(--text); font-weight:700; font-size:15px;
+  border:none; cursor:pointer; text-decoration:none; transition:opacity .15s;
+}
+.pd-cta-btn-light:hover { opacity:.88; color:var(--text); }
+
+/* ── DIVIDER ────────────────────────────────────────────── */
+.pd-section-divider {
+  border:none; border-top:1px solid var(--border); margin:0;
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media(max-width:900px){
+  .pd-main-grid { grid-template-columns:1fr !important; }
+  .pd-sidebar-col { position:static !important; }
+  .other-grid { grid-template-columns:1fr 1fr; }
+  .pd-feats-inner { grid-template-columns:1fr !important; }
+}
+@media(max-width:600px){
+  .other-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div id="nav-placeholder"></div>
+
+<!-- ═══ PAGE HEADER (matches products.html style) ═══ -->
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:40px 0">
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="index.html"><span class="en-i">Home</span><span class="ja-i">ホーム</span></a>
+      <span>›</span>
+      <a href="products.html"><span class="en-i">Products</span><span class="ja-i">製品</span></a>
+      <span>›</span>
+      <span style="color:var(--text2);font-weight:600" id="pd-bc-name">…</span>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:22px;margin:22px 0 18px">
+      <div id="pd-emoji" style="font-size:52px;line-height:1;flex-shrink:0;margin-top:4px">📦</div>
+      <div>
+        <h1 id="pd-name" style="font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-1.5px;color:var(--text);line-height:1.1;margin-bottom:10px">Product Name</h1>
+        <p id="pd-desc" style="font-size:16px;color:var(--text2);line-height:1.7;max-width:580px;margin:0">Loading…</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <span class="badge badge-red" id="pd-cat">Category</span>
+      <span id="pd-rating-badge" style="display:none;font-size:13px;color:var(--text2);display:none"></span>
+      <span id="pd-badge" style="display:none;background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px"></span>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ MAIN CONTENT — 2 COLUMN ═══ -->
+<div class="container" style="padding-top:52px;padding-bottom:72px">
+  <div class="pd-main-grid" style="display:grid;grid-template-columns:1fr 300px;gap:52px;align-items:start">
+
+    <!-- ── LEFT COLUMN ── -->
+    <div>
+
+      <!-- About / Long Description -->
+      <div id="pd-about-section" style="display:none;margin-bottom:48px">
+        <span class="pd-sec-label">
+          <span class="en-i">About</span>
+          <span class="ja-i">詳細</span>
+        </span>
+        <div class="pd-sec-title">
+          <span class="en-i">What is this product?</span>
+          <span class="ja-i">この製品について</span>
+        </div>
+        <div id="pd-long-desc" style="font-size:15px;color:var(--text2);line-height:1.85"></div>
+      </div>
+
+      <!-- Key Features -->
+      <div id="pd-features-section" style="display:none;margin-bottom:48px">
+        <span class="pd-sec-label">
+          <span class="en-i">Key Features</span>
+          <span class="ja-i">主な機能</span>
+        </span>
+        <div class="pd-sec-title">
+          <span class="en-i">Everything you get</span>
+          <span class="ja-i">含まれる機能一覧</span>
+        </div>
+        <div id="pd-feats-grid" class="pd-feats-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div id="pd-tech-section" style="display:none">
+        <span class="pd-sec-label">
+          <span class="en-i">Tech Stack</span>
+          <span class="ja-i">使用技術</span>
+        </span>
+        <div class="pd-sec-title">
+          <span class="en-i">Built with</span>
+          <span class="ja-i">採用技術</span>
+        </div>
+        <p class="en-i" style="font-size:13px;color:var(--text3);margin-bottom:14px">Runs on your computer — no server required.</p>
+        <p class="ja-i" style="font-size:13px;color:var(--text3);margin-bottom:14px">サーバー不要でお使いのコンピュータ上で動作します。</p>
+        <div id="pd-tech-list" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+
+        <!-- Tags -->
+        <div id="pd-tags-section" style="display:none;margin-top:16px">
+          <div id="pd-tags-list" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+        </div>
+      </div>
+
+    </div><!-- / left col -->
+
+    <!-- ── RIGHT COLUMN: Sticky Quick Facts ── -->
+    <div class="pd-sidebar-col" style="position:sticky;top:calc(var(--nav-h) + 20px)">
+      <div class="pd-facts-card">
+        <div class="pd-facts-header">
+          <span class="en-i">Quick Facts</span>
+          <span class="ja-i">製品情報</span>
+        </div>
+        <div class="pd-facts-body" id="pd-facts-body">
+          <!-- populated by JS -->
+        </div>
+        <div class="pd-facts-footer">
+          <a href="contact.html" class="btn btn-primary btn-block" style="justify-content:center">
+            <span class="en-i">📅 Book a Demo</span>
+            <span class="ja-i">📅 デモを予約</span>
+          </a>
+          <a href="contact.html" class="btn btn-secondary btn-block" style="justify-content:center">
+            <span class="en-i">💬 Contact Us</span>
+            <span class="ja-i">💬 お問い合わせ</span>
+          </a>
+        </div>
+      </div>
+    </div><!-- / right col -->
+
+  </div>
+</div>
+
+<hr class="pd-section-divider">
+
+<!-- ═══ RELATED PRODUCTS ═══ -->
+<div id="pd-related" style="background:var(--bg2);padding:64px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:36px">
+      <span class="pd-sec-label" style="display:block;text-align:center">
+        <span class="en-i">More Products</span>
+        <span class="ja-i">他の製品</span>
+      </span>
+      <div class="pd-sec-title" style="text-align:center;margin-bottom:0">
+        <span class="en-i">You might also like</span>
+        <span class="ja-i">こちらもおすすめ</span>
+      </div>
+    </div>
+    <div class="other-grid" id="pd-related-grid"></div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="products.html" class="btn btn-secondary">
+        <span class="en-i">View all products →</span>
+        <span class="ja-i">全製品を見る →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section class="pd-cta-banner">
+  <div class="container">
+    <div class="pd-cta-inner">
+      <h2>
+        <span class="en-i">Interested? Let's talk.</span>
+        <span class="ja-i">ご興味をお持ちですか？</span>
+      </h2>
+      <p>
+        <span class="en-i">Book a free demo or send us a message — we reply within 24 hours.</span>
+        <span class="ja-i">無料デモのご予約またはメッセージをお送りください。24時間以内にご返信します。</span>
+      </p>
+      <a href="contact.html" class="pd-cta-btn-light">
+        <span class="en-i">💬 Contact Us →</span>
+        <span class="ja-i">💬 お問い合わせ →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<script src="assets/app.js" defer></script>
+<script src="assets/nav.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var params = new URLSearchParams(location.search);
+  var id     = parseInt(params.get('id')) || 1;
+  var products = typeof Store !== 'undefined' ? Store.getProducts() : [];
+  var p = products.filter(function(x) { return x.id === id; })[0];
+  if (!p && products.length) p = products[0];
+  if (!p) { document.title = 'Product Not Found — Miraio'; return; }
+
+  document.title = p.name + ' — Miraio';
+  var metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', p.desc + ' — Miraio');
+
+  var $t = function(elId, v) { var e = document.getElementById(elId); if (e && v !== undefined && v !== null) e.textContent = v; };
+  var $h = function(elId, v) { var e = document.getElementById(elId); if (e && v) e.innerHTML = v; };
+  var $s = function(elId, d) { var e = document.getElementById(elId); if (e) e.style.display = d; };
+
+  /* ── HEADER ── */
+  $t('pd-bc-name', p.name);
+  var emojiEl = document.getElementById('pd-emoji');
+  if (emojiEl) emojiEl.textContent = p.emoji || '📦';
+  $t('pd-name', p.name);
+  $t('pd-desc', p.desc);
+  $t('pd-cat', p.category);
+
+  // Rating badge
+  if (p.rating) {
+    var rb = document.getElementById('pd-rating-badge');
+    if (rb) {
+      rb.innerHTML = '<span style="color:#D97706;margin-right:2px">★</span>' +
+        p.rating.toFixed(1) +
+        ' <span style="color:var(--text3);font-size:12px">(' + (p.reviews || 0) + ' reviews)</span>';
+      rb.style.display = 'inline-flex';
+      rb.style.alignItems = 'center';
+      rb.style.gap = '3px';
+    }
+  }
+
+  // Status badge
+  if (p.badge) { $t('pd-badge', p.badge); $s('pd-badge', 'inline-block'); }
+
+  /* ── QUICK FACTS CARD ── */
+  var factsEl = document.getElementById('pd-facts-body');
+  if (factsEl) {
+    var rows = [];
+    if (p.badge) {
+      rows.push({ label:'<span class="en-i">Status</span><span class="ja-i">ステータス</span>', val: p.badge });
+    }
+    rows.push(
+      { label:'<span class="en-i">Category</span><span class="ja-i">カテゴリ</span>',    val: p.category },
+      { label:'<span class="en-i">Rating</span><span class="ja-i">評価</span>',           val: p.rating ? '★ ' + p.rating.toFixed(1) + ' / 5' : '—' },
+      { label:'<span class="en-i">Reviews</span><span class="ja-i">レビュー数</span>',    val: (p.reviews || 0) + ' reviews' },
+      { label:'<span class="en-i">Languages</span><span class="ja-i">対応言語</span>',    val: 'EN · 日本語 · VI' },
+      { label:'<span class="en-i">Deployment</span><span class="ja-i">展開方法</span>',   val: '<span class="en-i">Runs locally</span><span class="ja-i">ローカル実行</span>' }
+    );
+    factsEl.innerHTML = rows.map(function(r) {
+      return '<div class="pd-fact-row">' +
+        '<span class="pd-fact-label">' + r.label + '</span>' +
+        '<span class="pd-fact-val">' + r.val + '</span>' +
+      '</div>';
+    }).join('');
+  }
+
+  /* ── ABOUT / LONG DESC ── */
+  if (p.long_desc) {
+    var ld = document.getElementById('pd-long-desc');
+    if (ld) {
+      ld.innerHTML = '<p>' + p.long_desc.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
+      $s('pd-about-section', 'block');
+    }
+  }
+
+  /* ── FEATURES ── */
+  if (p.features && p.features.length) {
+    var fg = document.getElementById('pd-feats-grid');
+    if (fg) {
+      fg.innerHTML = p.features.map(function(f) {
+        return '<div class="feat-item reveal">' +
+          '<div class="feat-check">✓</div>' +
+          '<div class="feat-text">' + f + '</div>' +
+        '</div>';
+      }).join('');
+      $s('pd-features-section', 'block');
+    }
+  }
+
+  /* ── TECH STACK ── */
+  if (p.tech && p.tech.length) {
+    var tl = document.getElementById('pd-tech-list');
+    if (tl) {
+      var techIcons = {
+        'Claude API':'⚡', 'Claude Cowork':'🛠', 'n8n':'🔄', 'Supabase':'🗄',
+        'Next.js':'▲', 'Python':'🐍', 'SheetJS':'📊', 'Chart.js':'📈',
+        'Excel/CSV':'📋', 'Scheduling':'⏰', 'Email':'📧', 'localStorage':'💾',
+        'Perplexity':'🔍', 'Web Research':'🌐', 'Japanese NLP':'🇯🇵',
+        'CRM Integration':'🤝'
+      };
+      tl.innerHTML = p.tech.map(function(t) {
+        return '<span class="pd-tech-pill">' +
+          '<span>' + (techIcons[t] || '⚙️') + '</span>' + t +
+        '</span>';
+      }).join('');
+      $s('pd-tech-section', 'block');
+    }
+  }
+
+  /* ── TAGS ── */
+  if (p.tags && p.tags.length) {
+    var tgs = document.getElementById('pd-tags-list');
+    var tgsec = document.getElementById('pd-tags-section');
+    if (tgs && tgsec) {
+      tgs.innerHTML = p.tags.map(function(t) { return '<span class="pd-tag-item">#' + t + '</span>'; }).join('');
+      tgsec.style.display = 'flex';
+    }
+  }
+
+  /* ── RELATED PRODUCTS ── */
+  var relGrid = document.getElementById('pd-related-grid');
+  if (relGrid) {
+    var others = products.filter(function(x) {
+      return x.status === 'active' && x.id !== p.id;
+    }).slice(0, 3);
+    if (others.length) {
+      relGrid.innerHTML = others.map(function(op) {
+        var detailUrl = op.detailUrl || ('product-detail.html?id=' + op.id);
+        return '<div class="other-card reveal">' +
+          '<div class="other-card-header">' +
+            '<span class="other-card-icon">' + op.emoji + '</span>' +
+            (op.badge ? '<span style="position:absolute;top:14px;right:14px;background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">' + op.badge + '</span>' : '') +
+            '<div class="other-card-cat">' + op.category + '</div>' +
+            '<div class="other-card-name">' + op.name + '</div>' +
+            '<div class="other-card-desc">' + op.desc + '</div>' +
+          '</div>' +
+          '<div class="other-card-footer">' +
+            '<span style="font-size:12px;color:#D97706;font-weight:600">★ ' +
+              (op.rating || 5).toFixed(1) +
+              ' <span style="color:var(--text3);font-weight:400;font-size:11px">(' + (op.reviews || 0) + ')</span>' +
+            '</span>' +
+            '<a href="' + detailUrl + '" class="btn btn-primary btn-sm">View →</a>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+    } else {
+      var relSec = document.getElementById('pd-related');
+      if (relSec) relSec.style.display = 'none';
+    }
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us — Miraio</title><meta name="theme-color" content="#0f0d0b">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Miraio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="Miraio: a team of AI engineers and consultants building practical AI tools for solopreneurs and IT consultants in Japan and Southeast Asia.">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.team-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:border-color .15s}
+.team-card:hover{border-color:var(--border2)}
+.team-avatar{width:72px;height:72px;border-radius:50%;background:var(--red-dim);border:2px solid var(--red-border);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 14px}
+.value-item{display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg)}
+.value-icon{width:40px;height:40px;border-radius:10px;background:var(--red-dim);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.timeline-item{display:flex;gap:20px;align-items:flex-start;padding-bottom:28px;position:relative}
+.timeline-item:not(:last-child)::before{content:'';position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--border)}
+.timeline-dot{width:32px;height:32px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;z-index:1}
+</style>
+<meta property="og:title" content="About Us — Miraio">
+<meta property="og:description" content="Learn about Miraio — a small team of AI engineers and consultants building practical AI tools for solopreneurs and IT professionals in Japan and Southeast Asia.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:64px 0">
+  <div class="container" style="max-width:760px;text-align:center">
+    <span class="section-eyebrow en-i" id="ab-eyebrow-en">About Miraio</span>
+    <span class="section-eyebrow ja-i" id="ab-eyebrow-ja">Miraioについて</span>
+    <h1 class="en" id="ab-h1-en" style="margin-bottom:16px">We believe AI should work<br>for everyone — not just enterprises</h1>
+    <h1 class="ja" id="ab-h1-ja" style="margin-bottom:16px">AIはすべての人のために<br>働くべきだと信じています</h1>
+    <p class="en" id="ab-sub-en" style="font-size:16px;max-width:580px;margin:0 auto">We're a small team of engineers and consultants based in Vietnam, specializing in AI tools for solopreneurs and IT professionals operating in the Japan and Southeast Asia markets.</p>
+    <p class="ja" id="ab-sub-ja" style="font-size:16px;max-width:580px;margin:0 auto">ベトナムを拠点とするエンジニアとコンサルタントの小チームです。日本・東南アジア市場で活動するソロプレナーとITプロフェッショナル向けのAIツールを専門としています。</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+      <div>
+        <span class="section-eyebrow en-i">Our story</span>
+        <span class="section-eyebrow ja-i">ストーリー</span>
+        <h2 class="en" id="ab-story-h2-en" style="margin-bottom:16px">Born from frustration, built with purpose</h2>
+        <h2 class="ja" id="ab-story-h2-ja" style="margin-bottom:16px">フラストレーションから生まれ、目的を持って構築</h2>
+        <p class="en" style="margin-bottom:16px">After years working as IT consultants in Japan, we kept running into the same problem: most AI tools were built for US enterprise customers, not for the nuanced realities of Japanese business culture, Vietnamese work styles, or Southeast Asian market dynamics.</p>
+        <p class="ja" style="margin-bottom:16px">日本でITコンサルタントとして長年働いた後、同じ問題に繰り返しぶつかりました。ほとんどのAIツールは米国の大企業向けに作られており、日本のビジネス文化や東南アジア市場の現実に合っていませんでした。</p>
+        <p class="en" style="margin-bottom:24px">So we started building tools that actually fit how we work. Tools that speak Japanese properly. Tools that understand nemawashi. Tools that help a solo consultant compete with a 50-person agency.</p>
+        <p class="ja" style="margin-bottom:24px">そこで、実際の働き方に合ったツールを構築し始めました。適切な日本語を話すツール。根回しを理解するツール。ソロコンサルタントが50人規模のエージェンシーと競えるようにするツール。</p>
+        <div style="display:flex;gap:32px">
+          <div class="stat-item"><span class="stat-num" id="ab-stat-users" style="font-size:24px">500+</span><span class="stat-label"><span class="en-i">Users worldwide</span><span class="ja-i">世界のユーザー</span></span></div>
+          <div class="stat-item"><span class="stat-num" id="ab-stat-countries" style="font-size:24px">3</span><span class="stat-label"><span class="en-i">Countries</span><span class="ja-i">対応国</span></span></div>
+          <div class="stat-item"><span class="stat-num" id="ab-stat-products" style="font-size:24px">4+</span><span class="stat-label"><span class="en-i">Products launched</span><span class="ja-i">製品数</span></span></div>
+        </div>
+      </div>
+      <div id="ab-timeline-col" style="display:flex;flex-direction:column;gap:16px">
+        <div class="timeline-item">
+          <div class="timeline-dot">2022</div>
+          <div><h4 class="en">Started as consultants in Japan</h4><h4 class="ja">日本でのコンサルタントとしてスタート</h4><p style="font-size:13px;margin-top:5px" class="en">Working on DX projects for Japanese SMEs, facing the tool gap firsthand.</p><p style="font-size:13px;margin-top:5px" class="ja">日本のSMEのDXプロジェクトに携わり、ツールのギャップを直接体験。</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2024</div>
+          <div><h4 class="en">Built our first AI agent suite</h4><h4 class="ja">最初のAIエージェントスイートを構築</h4><p style="font-size:13px;margin-top:5px" class="en">Released Solo Business AI to a small test group. 85% said it changed how they work.</p><p style="font-size:13px;margin-top:5px" class="ja">Solo Business AIを小グループでリリース。85%が仕事のやり方が変わったと回答。</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2025</div>
+          <div><h4 class="en">Launched Miraio</h4><h4 class="ja">Miraioを立ち上げ</h4><p style="font-size:13px;margin-top:5px" class="en">Formalized the brand, launched 4 products, and started serving 500+ users globally.</p><p style="font-size:13px;margin-top:5px" class="ja">ブランドを正式化し、4つの製品をリリース、世界500人以上のユーザーにサービスを提供開始。</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2026</div>
+          <div><h4 class="en" style="color:var(--red-light)">Growing the product line</h4><h4 class="ja" style="color:var(--red-light)">製品ラインを拡大中</h4><p style="font-size:13px;margin-top:5px" class="en">Expanding into more verticals and building deeper Japan-specific solutions.</p><p style="font-size:13px;margin-top:5px" class="ja">より多くの業種に展開し、日本特化型ソリューションをさらに深化させています。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<div class="section-alt">
+<div class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-eyebrow en-i">What we stand for</span>
+      <span class="section-eyebrow ja-i">私たちの信念</span>
+      <h2 class="section-title en">Our values</h2>
+      <h2 class="section-title ja">バリュー</h2>
+    </div>
+    <div class="grid grid-2" id="ab-values-grid">
+      <div class="value-item"><div class="value-icon">🎯</div><div><h4 class="en">Practical over theoretical</h4><h4 class="ja">理論より実践</h4><p style="font-size:13px;margin-top:6px" class="en">We only ship tools we've battle-tested in real workflows. No demos that don't work in production.</p><p style="font-size:13px;margin-top:6px" class="ja">実際のワークフローで実戦テスト済みのツールのみをリリース。本番環境で動かないデモは出しません。</p></div></div>
+      <div class="value-item"><div class="value-icon">🔒</div><div><h4 class="en">Privacy is non-negotiable</h4><h4 class="ja">プライバシーは妥協しない</h4><p style="font-size:13px;margin-top:6px" class="en">We never store your conversations or business data. What happens in your AI session, stays there.</p><p style="font-size:13px;margin-top:6px" class="ja">会話やビジネスデータは一切保存しません。AIセッションの内容はそこに留まります。</p></div></div>
+      <div class="value-item"><div class="value-icon">🌏</div><div><h4 class="en">Built for real markets</h4><h4 class="ja">リアルな市場のために構築</h4><p style="font-size:13px;margin-top:6px" class="en">Japanese business culture, keigo, nemawashi — these aren't afterthoughts. They're built in from day one.</p><p style="font-size:13px;margin-top:6px" class="ja">日本のビジネス文化、敬語、根回し — これらは後付けではありません。最初から組み込まれています。</p></div></div>
+      <div class="value-item"><div class="value-icon">⚡</div><div><h4 class="en">Fast to value, not fast to ship</h4><h4 class="ja">価値への到達が早い、リリースが早いではない</h4><p style="font-size:13px;margin-top:6px" class="en">We'd rather release one product that genuinely changes how you work than ten that look good in a demo.</p><p style="font-size:13px;margin-top:6px" class="ja">デモ映えする10製品より、仕事のやり方を本当に変える1製品をリリースする方を選びます。</p></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-eyebrow en-i">The team</span>
+      <span class="section-eyebrow ja-i">チーム</span>
+      <h2 class="section-title en">Small team, big impact</h2>
+      <h2 class="section-title ja">小さなチーム、大きな影響</h2>
+    </div>
+    <div class="grid grid-4" id="ab-team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👨‍💻</div>
+        <h4 style="margin-bottom:4px">Hien N.</h4>
+        <p style="font-size:11px;color:var(--red-light);font-weight:600;margin-bottom:8px">Founder & AI Architect</p>
+        <p style="font-size:12px;color:var(--text3);line-height:1.5">10+ years Japan IT consulting. Built the first Solo Business AI suite.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🎨</div>
+        <h4 style="margin-bottom:4px">Designer</h4>
+        <p style="font-size:11px;color:var(--metal);font-weight:600;margin-bottom:8px">UX / Product Design</p>
+        <p style="font-size:12px;color:var(--text3);line-height:1.5">Specializes in Japanese-market UI patterns and accessible dark-mode design systems.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">⚙️</div>
+        <h4 style="margin-bottom:4px">Engineer</h4>
+        <p style="font-size:11px;color:var(--metal);font-weight:600;margin-bottom:8px">Backend & Automation</p>
+        <p style="font-size:12px;color:var(--text3);line-height:1.5">n8n specialist. Builds the automation engines that power our workflow tools.</p>
+      </div>
+      <div class="team-card" style="border:1px dashed var(--border2);background:transparent">
+        <div class="team-avatar" style="background:var(--metal-dim);border-color:rgba(158,158,158,.3)">+</div>
+        <h4 style="margin-bottom:4px" class="en">We're hiring</h4>
+        <h4 style="margin-bottom:4px" class="ja">採用中</h4>
+        <p style="font-size:12px;color:var(--text3);line-height:1.5;margin-bottom:12px" class="en">Looking for AI engineers & Japan market specialists.</p>
+        <p style="font-size:12px;color:var(--text3);line-height:1.5;margin-bottom:12px" class="ja">AIエンジニアと日本市場スペシャリストを募集中。</p>
+        <a href="contact.html" class="btn btn-ghost btn-sm"><span class="en-i">Apply →</span><span class="ja-i">応募 →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="section-alt section-sm">
+  <div class="container" style="text-align:center">
+    <h3 class="en" id="ab-cta-en">Want to work together?</h3>
+    <h3 class="ja" id="ab-cta-ja">一緒に仕事をしませんか？</h3>
+    <p class="en" style="margin:10px 0 24px">Whether you're a client, partner, or candidate — we'd love to hear from you.</p>
+    <p class="ja" style="margin:10px 0 24px">クライアント、パートナー、候補者の方 — どうぞご連絡ください。</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-primary"><span class="en-i">Get in touch →</span><span class="ja-i">お問い合わせ →</span></a>
+      <a href="services.html" class="btn btn-secondary"><span class="en-i">View services</span><span class="ja-i">サービスを見る</span></a>
+    </div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="assets/app.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script>
+(function applyAboutPage() {
+  var d; try { d = JSON.parse(localStorage.getItem('miraio_about_page') || 'null') || {}; } catch(e) { d = {}; }
+  function tx(id,v){ if(!v) return; var el=document.getElementById(id); if(el) el.textContent=v; }
+  function ih(id,v){ if(!v) return; var el=document.getElementById(id); if(el) el.innerHTML=v; }
+  tx('ab-eyebrow-en', d.eyebrow_en);
+  tx('ab-eyebrow-ja', d.eyebrow_ja);
+  ih('ab-h1-en', d.h1_en);
+  ih('ab-h1-ja', d.h1_ja);
+  tx('ab-sub-en', d.sub_en);
+  tx('ab-sub-ja', d.sub_ja);
+  ih('ab-story-h2-en', d.story_h2_en || d.story_en && '');
+  tx('ab-stat-users', d.stat_users);
+  tx('ab-stat-countries', d.stat_countries);
+  tx('ab-stat-products', d.stat_products);
+  tx('ab-cta-en', d.cta_en);
+  tx('ab-cta-ja', d.cta_ja);
+  // Timeline (if admin saved custom array)
+  var timeline = Array.isArray(d.timeline) ? d.timeline : [];
+  if (timeline.length) {
+    var col = document.getElementById('ab-timeline-col');
+    if (col) col.innerHTML = timeline.map(function(t) {
+      return '<div class="timeline-item">' +
+        '<div class="timeline-dot">' + (t.year||'') + '</div>' +
+        '<div>' +
+          (t.h_en ? '<h4 class="en" style="'+(t.color?'color:'+t.color:'')+'">'+t.h_en+'</h4>' : '') +
+          (t.h_ja ? '<h4 class="ja" style="'+(t.color?'color:'+t.color:'')+'">'+t.h_ja+'</h4>' : '') +
+          (t.p_en ? '<p style="font-size:13px;margin-top:5px" class="en">'+t.p_en+'</p>' : '') +
+          (t.p_ja ? '<p style="font-size:13px;margin-top:5px" class="ja">'+t.p_ja+'</p>' : '') +
+        '</div></div>';
+    }).join('');
+  }
+  // Team (if admin saved custom array)
+  var team = Array.isArray(d.team) ? d.team : [];
+  if (team.length) {
+    var tg = document.getElementById('ab-team-grid');
+    if (tg) tg.innerHTML = team.map(function(m) {
+      return '<div class="team-card">' +
+        '<div class="team-avatar">' + (m.emoji||'👤') + '</div>' +
+        '<h4 style="margin-bottom:4px">' + (m.name||'') + '</h4>' +
+        '<p style="font-size:11px;color:var(--red-light);font-weight:600;margin-bottom:8px">' + (m.role_en||m.role||'') + '</p>' +
+        '<p style="font-size:12px;color:var(--text3);line-height:1.5">' + (m.bio||'') + '</p>' +
+      '</div>';
+    }).join('');
+  }
+  // Values (if admin saved custom array)
+  var values = Array.isArray(d.values) ? d.values : [];
+  if (values.length) {
+    var vg = document.getElementById('ab-values-grid');
+    if (vg) vg.innerHTML = values.map(function(v) {
+      return '<div class="value-item">' +
+        '<div class="value-icon">' + (v.icon||'✦') + '</div>' +
+        '<div>' +
+          (v.h_en ? '<h4 class="en">'+v.h_en+'</h4>' : '') +
+          (v.h_ja ? '<h4 class="ja">'+v.h_ja+'</h4>' : '') +
+          (v.p_en ? '<p style="font-size:13px;margin-top:6px" class="en">'+v.p_en+'</p>' : '') +
+          (v.p_ja ? '<p style="font-size:13px;margin-top:6px" class="ja">'+v.p_ja+'</p>' : '') +
+        '</div></div>';
+    }).join('');
+  }
+})();
+</script>
+</body>
+</html>

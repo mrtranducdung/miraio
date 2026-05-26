@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Resources & Knowledge Hub — Miraio</title>
+<meta name="description" content="AI resources: blog posts, prompt library, guides, and news for solopreneurs and IT consultants targeting Japan and Southeast Asia.">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ── TYPE CONFIG ── */
+.type-chip{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.type-Blog    { background:rgba(183,28,28,0.08);   color:#B71C1C; }
+.type-Prompt  { background:rgba(22,101,52,0.08);    color:#166534; }
+.type-Guide   { background:rgba(21,101,192,0.08);   color:#1565C0; }
+.type-News    { background:rgba(100,116,139,0.10);  color:#475569; }
+
+/* ── FEATURED ARTICLE ── */
+.feat-article{background:var(--card);border:1.5px solid var(--border);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;margin-bottom:40px;transition:border-color .2s,box-shadow .2s}
+.feat-article:hover{border-color:var(--border2);box-shadow:var(--s2)}
+.feat-article-visual{background:linear-gradient(135deg,#FAF7F0 0%,#FDE68A 100%);padding:40px;display:flex;align-items:center;justify-content:center;min-height:260px;position:relative;overflow:hidden}
+.feat-article-visual::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.feat-article-emoji{font-size:72px;position:relative;z-index:1}
+.feat-article-content{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
+.feat-article-meta{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.feat-read-btn{display:inline-flex;align-items:center;gap:6px;margin-top:20px;padding:11px 22px;border-radius:10px;background:var(--red);color:#fff;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .18s}
+.feat-read-btn:hover{background:var(--red-h);transform:translateY(-1px)}
+
+/* ── RESOURCE CARD (new) ── */
+.res-card-v2{background:var(--card);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:all .22s;cursor:pointer}
+.res-card-v2:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:var(--s2)}
+.res-card-top{padding:20px 20px 14px;border-bottom:1px solid var(--border)}
+.res-card-icon-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.res-card-type-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.res-card-title{font-size:15px;font-weight:700;color:var(--text);line-height:1.45;margin-bottom:8px}
+.res-card-excerpt{font-size:12px;color:var(--text2);line-height:1.65}
+.res-card-bottom{padding:12px 20px;display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.res-card-meta{font-size:11px;color:var(--text3)}
+.res-read-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--red);border:none;background:none;cursor:pointer;font-family:inherit;padding:0;transition:gap .15s}
+.res-read-link:hover{gap:8px}
+
+/* ── READ MODAL ── */
+.read-modal-overlay{position:fixed;inset:0;background:rgba(28,25,23,0.6);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .25s;backdrop-filter:blur(4px)}
+.read-modal-overlay.open{opacity:1;visibility:visible}
+.read-modal{background:var(--card);border-radius:20px;max-width:700px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 80px rgba(28,25,23,0.25);transform:translateY(20px) scale(0.97);transition:all .28s cubic-bezier(.16,1,.3,1)}
+.read-modal-overlay.open .read-modal{transform:translateY(0) scale(1)}
+.read-modal-header{padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:16px}
+.read-modal-body{padding:28px;overflow-y:auto;flex:1;line-height:1.8;font-size:14px;color:var(--text2)}
+.read-modal-body h3{font-size:16px;font-weight:700;color:var(--text);margin:24px 0 8px}
+.read-modal-body h3:first-child{margin-top:0}
+.read-modal-body p{margin-bottom:14px;line-height:1.8}
+.read-modal-body pre{font-size:11px;overflow-x:auto;border-radius:10px}
+.read-modal-close{width:32px;height:32px;border-radius:50%;background:var(--bg2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--text2);flex-shrink:0;margin-left:auto;transition:all .15s;font-family:inherit}
+.read-modal-close:hover{background:var(--red);color:#fff;border-color:var(--red)}
+
+/* ── SEARCH BAR ── */
+.res-search{display:flex;align-items:center;gap:0;background:var(--card);border:1.5px solid var(--border2);border-radius:10px;overflow:hidden;max-width:280px;transition:border-color .15s}
+.res-search:focus-within{border-color:var(--red)}
+.res-search input{border:none;padding:9px 14px;font-size:13px;background:transparent;font-family:inherit;color:var(--text);outline:none;flex:1;min-width:0}
+.res-search button{padding:8px 12px;background:transparent;border:none;cursor:pointer;color:var(--text3);font-size:14px}
+
+/* ── STATS STRIP ── */
+.res-stats{display:flex;gap:0;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:32px;background:var(--card)}
+.res-stat{flex:1;padding:16px 12px;text-align:center;border-right:1px solid var(--border)}
+.res-stat:last-child{border-right:none}
+.res-stat-num{font-size:24px;font-weight:800;color:var(--text);letter-spacing:-1px}
+.res-stat-label{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* ── TABS ── */
+.res-tabs-v2{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+.res-tab-v2{padding:8px 18px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid var(--border2);background:transparent;color:var(--text2);transition:all .15s;font-family:inherit}
+.res-tab-v2:hover{border-color:var(--border3);color:var(--text)}
+.res-tab-v2.active{background:var(--text);border-color:var(--text);color:#FAF9F7}
+
+/* ── NEWSLETTER CTA ── */
+.nl-cta{background:var(--dark);border-radius:20px;padding:40px;margin-top:48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.nl-form{display:flex;gap:8px;flex-wrap:wrap}
+.nl-input{flex:1;min-width:200px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:11px 14px;font-size:13px;color:#FAF9F7;outline:none;font-family:inherit;transition:border-color .15s}
+.nl-input:focus{border-color:rgba(255,255,255,0.3)}
+.nl-input::placeholder{color:rgba(255,255,255,0.35)}
+
+@media(max-width:900px){
+  .feat-article{grid-template-columns:1fr}
+  .feat-article-visual{display:none}
+  .nl-cta{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .res-stats{flex-direction:column}
+  .res-stat{border-right:none;border-bottom:1px solid var(--border)}
+  .res-stat:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- HIGHLIGHT STRIP -->
+<div id="highlightStrip" style="display:none;background:var(--dark);border-bottom:1px solid rgba(255,255,255,0.08);padding:10px 0">
+  <div class="container" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:.6px;flex-shrink:0">
+      <span class="en-i">📌 Featured</span><span class="ja-i">📌 おすすめ</span>
+    </span>
+    <span id="hlType" style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;background:rgba(183,28,28,0.4);color:#fca5a5;flex-shrink:0"></span>
+    <span id="hlTitle" style="font-size:13px;font-weight:600;color:#FAF9F7;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"></span>
+    <button id="hlReadBtn" style="background:var(--red);color:#fff;border:none;border-radius:8px;padding:5px 14px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit">
+      <span class="en-i">Read →</span><span class="ja-i">読む →</span>
+    </button>
+    <button onclick="document.getElementById('highlightStrip').style.display='none'" style="background:transparent;border:none;color:rgba(255,255,255,0.35);font-size:16px;cursor:pointer;padding:0 4px;flex-shrink:0;line-height:1">✕</button>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:40px 0">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html"><span class="en-i">Home</span><span class="ja-i">ホーム</span></a>
+      <span>›</span>
+      <span><span class="en-i">Resources</span><span class="ja-i">リソース</span></span>
+    </div>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <h1 style="font-size:clamp(24px,4vw,38px);margin-bottom:10px" class="en" id="res-page-h1-en">Resources & Knowledge Hub</h1>
+        <h1 style="font-size:clamp(24px,4vw,38px);margin-bottom:10px" class="ja" id="res-page-h1-ja">リソース&ナレッジハブ</h1>
+        <p class="en" id="res-page-sub-en">Practical guides, AI prompts, blog posts, and the latest AI news for solopreneurs & IT consultants.</p>
+        <p class="ja" id="res-page-sub-ja">ソロプレナー・ITコンサルタント向けの実践ガイド、AIプロンプト、ブログ、最新ニュース。</p>
+      </div>
+      <div class="res-search">
+        <input type="text" id="searchInput" placeholder="Search resources…" oninput="filterResources()">
+        <button>🔍</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+<div class="container">
+
+  <!-- Stats strip -->
+  <div class="res-stats">
+    <div class="res-stat">
+      <div class="res-stat-num">6+</div>
+      <div class="res-stat-label"><span class="en-i">Resources</span><span class="ja-i">リソース</span></div>
+    </div>
+    <div class="res-stat">
+      <div class="res-stat-num">50+</div>
+      <div class="res-stat-label"><span class="en-i">AI Prompts</span><span class="ja-i">AIプロンプト</span></div>
+    </div>
+    <div class="res-stat">
+      <div class="res-stat-num">2–3</div>
+      <div class="res-stat-label"><span class="en-i">New / month</span><span class="ja-i">月間新着</span></div>
+    </div>
+    <div class="res-stat">
+      <div class="res-stat-num">Free</div>
+      <div class="res-stat-label"><span class="en-i">Always</span><span class="ja-i">すべて無料</span></div>
+    </div>
+  </div>
+
+  <!-- Featured Article -->
+  <div id="featuredArticle"></div>
+
+  <!-- Tabs + Grid -->
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+    <div class="res-tabs-v2" id="res-tabs">
+      <button class="res-tab-v2 active" data-group="res" data-tab="all" onclick="switchTab('all',this)"><span class="en-i">All</span><span class="ja-i">すべて</span></button>
+      <button class="res-tab-v2" data-group="res" data-tab="blog" onclick="switchTab('Blog',this)">Blog</button>
+      <button class="res-tab-v2" data-group="res" data-tab="prompts" onclick="switchTab('Prompt',this)"><span class="en-i">Prompts</span><span class="ja-i">プロンプト</span></button>
+      <button class="res-tab-v2" data-group="res" data-tab="guides" onclick="switchTab('Guide',this)">Guides</button>
+      <button class="res-tab-v2" data-group="res" data-tab="news" onclick="switchTab('News',this)">News</button>
+    </div>
+    <div style="font-size:12px;color:var(--text3)" id="resCount"></div>
+  </div>
+
+  <div id="resourcesGrid" class="grid grid-3"></div>
+
+  <!-- Newsletter CTA -->
+  <div class="nl-cta">
+    <div>
+      <h3 style="color:#FAF9F7;font-size:20px;margin-bottom:8px"><span class="en-i">Stay ahead of AI trends</span><span class="ja-i">AIトレンドを先取り</span></h3>
+      <p style="color:#78716C;font-size:13px;margin-bottom:20px"><span class="en-i">New resources, prompts, and guides every week. No spam — unsubscribe anytime.</span><span class="ja-i">毎週新しいリソース、プロンプト、ガイドを配信。スパムなし。</span></p>
+      <form class="nl-form newsletter-form">
+        <input type="email" placeholder="your@email.com" required class="nl-input">
+        <button type="submit" class="btn btn-primary"><span class="en-i">Subscribe</span><span class="ja-i">登録する</span></button>
+      </form>
+    </div>
+    <div style="text-align:center;opacity:.15;font-size:80px;line-height:1" class="en-i">📬</div>
+  </div>
+
+</div>
+</section>
+
+<!-- Read Modal -->
+<div class="read-modal-overlay" id="readModal" onclick="if(event.target===this)closeReadModal()">
+  <div class="read-modal">
+    <div class="read-modal-header">
+      <div>
+        <div id="rm-typechip" style="margin-bottom:10px"></div>
+        <h2 id="rm-title" style="font-size:20px;font-weight:800;line-height:1.35;color:var(--text)"></h2>
+        <div id="rm-meta" style="font-size:12px;color:var(--text3);margin-top:8px"></div>
+      </div>
+      <button class="read-modal-close" onclick="closeReadModal()">✕</button>
+    </div>
+    <div class="read-modal-body" id="rm-body"></div>
+  </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="assets/app.js" defer></script>
+<script src="assets/nav.js" defer></script>
+<script>
+// ── Apply Resources Page content from admin ──────────────────
+function applyResourcesPage() {
+  var pg; try { pg = JSON.parse(localStorage.getItem('miraio_resources_page') || 'null') || {}; } catch(e) { pg = {}; }
+  var si = function(id, val) { var el = document.getElementById(id); if (el && val) el.innerHTML = val; };
+  si('res-page-h1-en', pg.title_en); si('res-page-h1-ja', pg.title_ja);
+  si('res-page-sub-en', pg.sub_en); si('res-page-sub-ja', pg.sub_ja);
+}
+applyResourcesPage();
+
+// ── Type config ──────────────────────────────────────────────
+var TYPE_ICONS = { Blog:'📝', Prompt:'✨', Guide:'📖', News:'📰' };
+var TYPE_BG    = { Blog:'rgba(183,28,28,0.06)', Prompt:'rgba(22,101,52,0.06)', Guide:'rgba(21,101,192,0.06)', News:'rgba(100,116,139,0.08)' };
+
+// ── Open / close modal ───────────────────────────────────────
+function openReadModal(id) {
+  var r = allRes.filter(function(x){ return x.id === id; })[0];
+  if (!r) return;
+  document.getElementById('rm-title').textContent = r.title;
+  document.getElementById('rm-typechip').innerHTML = '<span class="type-chip type-' + r.type + '">' + (TYPE_ICONS[r.type]||'📄') + ' ' + r.type + '</span>';
+  document.getElementById('rm-meta').innerHTML = r.date + ' &nbsp;·&nbsp; ' + r.readTime + ' read' +
+    (r.tags ? ' &nbsp;·&nbsp; ' + r.tags.slice(0,3).map(function(t){ return '<span class="badge badge-metal">' + t + '</span>'; }).join(' ') : '');
+  document.getElementById('rm-body').innerHTML = r.body
+    ? '<p style="font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:20px">' + r.excerpt + '</p><hr style="border:none;border-top:1px solid var(--border);margin:0 0 20px">' + r.body
+    : '<p style="color:var(--text2)">' + r.excerpt + '</p><p style="color:var(--text3);font-style:italic;margin-top:20px">Full article coming soon.</p>';
+  document.getElementById('readModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeReadModal() {
+  document.getElementById('readModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeReadModal(); });
+
+// ── Featured article ─────────────────────────────────────────
+function renderFeatured(res) {
+  var r = res[0];
+  if (!r) return;
+  var fa = document.getElementById('featuredArticle');
+  fa.innerHTML = '<div class="feat-article">' +
+    '<div class="feat-article-visual"><div class="feat-article-emoji">' + (TYPE_ICONS[r.type]||'📄') + '</div></div>' +
+    '<div class="feat-article-content">' +
+      '<div class="feat-article-meta">' +
+        '<span class="type-chip type-' + r.type + '">' + (TYPE_ICONS[r.type]||'📄') + ' ' + r.type + '</span>' +
+        '<span style="font-size:11px;color:var(--text3)">' + r.date + '</span>' +
+        '<span style="font-size:11px;color:var(--text3)">' + r.readTime + ' read</span>' +
+      '</div>' +
+      '<h2 style="font-size:clamp(18px,2.5vw,26px);font-weight:800;line-height:1.3;margin-bottom:12px">' + r.title + '</h2>' +
+      '<p style="font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:0">' + r.excerpt + '</p>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">' +
+        (r.tags||[]).map(function(t){ return '<span class="badge badge-metal">' + t + '</span>'; }).join('') +
+      '</div>' +
+      '<button class="feat-read-btn" onclick="openReadModal(' + r.id + ')"><span class="en-i">Read article →</span><span class="ja-i">記事を読む →</span></button>' +
+    '</div>' +
+  '</div>';
+}
+
+// ── Main render ──────────────────────────────────────────────
+var allRes = [], currentType = 'all';
+
+function renderResources() {
+  var q = (document.getElementById('searchInput') && document.getElementById('searchInput').value || '').toLowerCase();
+  var res = allRes.slice();
+  if (currentType !== 'all') res = res.filter(function(r) { return r.type === currentType; });
+  if (q) res = res.filter(function(r) { return r.title.toLowerCase().includes(q) || r.excerpt.toLowerCase().includes(q); });
+
+  var countEl = document.getElementById('resCount');
+  if (countEl) countEl.textContent = res.length + ' result' + (res.length !== 1 ? 's' : '');
+
+  var grid = document.getElementById('resourcesGrid');
+  grid.innerHTML = res.map(function(r) {
+    return '<div class="res-card-v2 reveal" onclick="openReadModal(' + r.id + ')">' +
+      '<div class="res-card-top" style="background:' + (TYPE_BG[r.type]||'var(--bg2)') + '">' +
+        '<div class="res-card-icon-row">' +
+          '<div class="res-card-type-icon" style="background:var(--card)">' + (TYPE_ICONS[r.type]||'📄') + '</div>' +
+          '<span class="type-chip type-' + r.type + '">' + r.type + '</span>' +
+        '</div>' +
+        '<div class="res-card-title">' + r.title + '</div>' +
+        '<div class="res-card-excerpt">' + r.excerpt + '</div>' +
+      '</div>' +
+      '<div style="padding:10px 20px 6px;display:flex;flex-wrap:wrap;gap:5px">' +
+        (r.tags||[]).slice(0,3).map(function(t){ return '<span class="badge badge-metal">' + t + '</span>'; }).join('') +
+      '</div>' +
+      '<div class="res-card-bottom">' +
+        '<div class="res-card-meta">' + r.date + ' · ' + r.readTime + ' read</div>' +
+        '<button class="res-read-link"><span class="en-i">Read →</span><span class="ja-i">読む →</span></button>' +
+      '</div>' +
+    '</div>';
+  }).join('') || '<p style="color:var(--text3);padding:60px 20px;text-align:center;grid-column:1/-1">No resources found.</p>';
+
+  setTimeout(initReveal, 50);
+}
+
+function switchTab(type, btn) {
+  currentType = type;
+  document.querySelectorAll('.res-tab-v2').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderResources();
+}
+
+function filterResources() { renderResources(); }
+
+// ── Highlight strip ──────────────────────────────────────────
+function showHighlightStrip(res) {
+  var r = res.filter(function(x){ return x.highlight; })[0];
+  if (!r) return;
+  var strip = document.getElementById('highlightStrip');
+  var hlTitle = document.getElementById('hlTitle');
+  var hlType = document.getElementById('hlType');
+  var hlBtn = document.getElementById('hlReadBtn');
+  if (!strip) return;
+  hlTitle.textContent = r.title;
+  hlType.textContent = r.type;
+  hlBtn.onclick = function() { openReadModal(r.id); };
+  strip.style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  allRes = Store.getResources();
+  renderFeatured(allRes);
+  var params = new URLSearchParams(location.search);
+  var tab = params.get('tab');
+  if (tab) {
+    var typeMap = { blog:'Blog', prompts:'Prompt', guides:'Guide', news:'News' };
+    currentType = typeMap[tab] || 'all';
+    document.querySelectorAll('.res-tab-v2').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.tab === tab || (tab === 'all' && b.dataset.tab === 'all'));
+    });
+  }
+  renderResources();
+  showHighlightStrip(allRes);
+});
+</script>
+</body>
+</html>

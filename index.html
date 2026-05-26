@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Miraio — AI Tools for Solopreneurs & IT Consultants in Japan</title><meta name="theme-color" content="#0f0d0b">
+<meta name="robots" content="index, follow">
+<meta property="og:site_name" content="Miraio">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="14 specialized AI agents for solopreneurs and IT consultants. Japan market expertise, 3-language support, save 15-20 hours per week.">
+<link rel="canonical" href="https://miraio.com/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B71C1C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2' fill='%23B71C1C'/></svg>">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.hero-visual{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--s2)}
+.agent-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:16px 16px 12px}
+.agent-pill{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 6px;text-align:center}
+.agent-pill.hot{background:var(--red-dim);border-color:var(--red-border)}
+.agent-pill .icon{width:18px;height:18px;display:flex;align-items:center;justify-content:center;margin:0 auto;color:var(--text3)}
+.agent-pill.hot .icon{color:var(--red)}
+.agent-pill .icon svg{display:block;color:inherit}
+.agent-pill .lbl{font-size:8px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-top:4px;display:block}
+.agent-pill.hot .lbl{color:var(--red)}
+.brief-bar{background:var(--dark);padding:12px 16px;display:flex;align-items:center;gap:10px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#22C55E;flex-shrink:0;animation:ld 2s infinite}
+@keyframes ld{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.4)}60%{box-shadow:0 0 0 7px rgba(34,197,94,0)}}
+.benefit-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.stat-strip{display:flex;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:48px}
+.strip-item{flex:1;padding:20px 16px;text-align:center;border-right:1px solid var(--border)}
+.strip-item:last-child{border-right:none}
+.strip-num{font-size:26px;font-weight:800;color:var(--text);letter-spacing:-1px;display:block}
+.strip-lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;font-weight:600;display:block}
+@media(max-width:900px){.hero-two-col{grid-template-columns:1fr!important}.hero-visual{display:none}}
+</style>
+<meta property="og:title" content="Miraio — AI Tools for Solopreneurs & IT Consultants in Japan">
+<meta property="og:description" content="Practical AI tools and consulting for solopreneurs and IT consultants operating in Japan and Southeast Asia. Solo Business AI, DX Analyzer, Impact Dashboard and more.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="hero-two-col" style="display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:center">
+  <div>
+    <div class="hero-badge reveal"><svg width="11" height="11" viewBox="0 0 24 24" fill="var(--red)" stroke="var(--red)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span class="en-i" id="hpBadgeEn">500+ solopreneurs & IT consultants worldwide</span><span class="ja-i" id="hpBadgeJa">世界500人以上が利用中</span></div>
+    <h1 class="en reveal reveal-delay-1" id="hpH1En" style="margin-bottom:20px">AI tools built for<br><em class="accent">Japan & Southeast Asia</em></h1>
+    <h1 class="ja reveal reveal-delay-1" id="hpH1Ja" style="margin-bottom:20px">日本・東南アジアのための<br><em class="accent">AIプロダクト</em></h1>
+    <p class="hero-sub en reveal reveal-delay-2" id="hpSubEn">14 AI agents handle research, strategy, sales, legal, and finance — in Japanese, English, and Vietnamese. No server. Ready in 10 minutes.</p>
+    <p class="hero-sub ja reveal reveal-delay-2" id="hpSubJa">14のAIエージェントがリサーチ・戦略・営業・法務・財務を代行。日本語・英語・ベトナム語対応。サーバー不要。10分で稼働。</p>
+    <div class="hero-btns reveal reveal-delay-3">
+      <a href="products.html" class="btn btn-primary btn-lg" id="hpBtn1"><span class="en-i" id="hpBtn1En">See Products →</span><span class="ja-i" id="hpBtn1Ja">製品を見る →</span></a>
+      <a href="contact.html" class="btn btn-secondary btn-lg" id="hpBtn2"><span class="en-i" id="hpBtn2En">Free Consultation</span><span class="ja-i" id="hpBtn2Ja">無料相談</span></a>
+    </div>
+    <div class="stat-strip reveal reveal-delay-3">
+      <div class="strip-item"><span class="strip-num" id="hpStat1Num">14</span><span class="strip-lbl"><span class="en-i" id="hpStat1LblEn">AI Agents</span><span class="ja-i" id="hpStat1LblJa">エージェント</span></span></div>
+      <div class="strip-item"><span class="strip-num" id="hpStat2Num">15–20h</span><span class="strip-lbl"><span class="en-i" id="hpStat2LblEn">Saved/week</span><span class="ja-i" id="hpStat2LblJa">週次節約</span></span></div>
+      <div class="strip-item"><span class="strip-num" id="hpStat3Num">3</span><span class="strip-lbl"><span class="en-i" id="hpStat3LblEn">Languages</span><span class="ja-i" id="hpStat3LblJa">対応言語</span></span></div>
+      <div class="strip-item"><span class="strip-num" id="hpStat4Num">$97</span><span class="strip-lbl"><span class="en-i" id="hpStat4LblEn">Starts from</span><span class="ja-i" id="hpStat4LblJa">価格から</span></span></div>
+    </div>
+  </div>
+  <div class="hero-visual reveal reveal-delay-2">
+    <div style="padding:14px 16px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+      <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3)">14 Agents Active</span>
+      <span style="font-size:10px;color:#22C55E;font-weight:700;display:flex;align-items:center;gap:4px"><span style="width:6px;height:6px;background:#22C55E;border-radius:50%;display:inline-block"></span>LIVE</span>
+    </div>
+    <div class="agent-grid">
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span class="lbl">Research</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg></span><span class="lbl">Strategy</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></span><span class="lbl">Copy</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span><span class="lbl">Sales</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span><span class="lbl">Build</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="lbl">Support</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span class="lbl">Analyst</span></div>
+      <div class="agent-pill"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></span><span class="lbl">Admin</span></div>
+      <div class="agent-pill hot"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><span class="lbl">Finance</span></div>
+      <div class="agent-pill hot"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span><span class="lbl">Coach</span></div>
+      <div class="agent-pill hot"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="3"/><line x1="5.64" y1="5.64" x2="7.05" y2="7.05"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="5.64" y1="18.36" x2="7.05" y2="16.95"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="18.36" y1="18.36" x2="16.95" y2="16.95"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="18.36" y1="5.64" x2="16.95" y2="7.05"/><circle cx="12" cy="12" r="5"/></svg></span><span class="lbl">Legal</span></div>
+      <div class="agent-pill hot"><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg></span><span class="lbl">Partner</span></div>
+    </div>
+    <div class="brief-bar">
+      <div class="live-dot"></div>
+      <div style="flex:1"><div style="font-size:12px;font-weight:600;color:#FAF9F7">Morning Brief — 07:00</div><div style="font-size:10px;color:#78716C;margin-top:1px">3 follow-ups · 1 invoice due · 2 priorities</div></div>
+      <a href="../solo-business-ai-chatbot.html" target="_blank" style="font-size:11px;font-weight:600;color:var(--red);background:rgba(183,28,28,.15);padding:4px 10px;border-radius:6px;white-space:nowrap">Open →</a>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<div class="divider-red"></div>
+
+<!-- PRODUCT SUITE SHOWCASE (doola-inspired tabs) -->
+<section class="section">
+<div class="container">
+  <div class="text-center" style="margin-bottom:40px">
+    <span class="section-eyebrow en-i">Featured Product</span>
+    <span class="section-eyebrow ja-i">注目製品</span>
+    <h2 class="en reveal" id="suiteHeading">Solo Business AI — Your complete AI team</h2>
+    <h2 class="ja reveal" id="suiteHeadingJa">Solo Business AI — 完全なAIチーム</h2>
+    <p class="section-sub en reveal" id="suiteSubtitle">14 specialized agents that understand your business, speak your language, and work while you sleep.</p>
+    <p class="section-sub ja reveal" id="suiteSubtitleJa">14の専門エージェントがあなたのビジネスを理解し、あなたの言語で話し、あなたが眠っている間も働きます。</p>
+  </div>
+  <div class="suite-wrap reveal" id="suiteWrap">
+    <div class="suite-header">
+      <div class="suite-tabs" id="suiteTabs">
+        <button class="suite-tab active" data-tab="overview" onclick="switchSuiteTab('overview',this)"><span class="en-i">Overview</span><span class="ja-i">概要</span></button>
+        <button class="suite-tab" data-tab="agents" onclick="switchSuiteTab('agents',this)"><span class="en-i">14 Agents</span><span class="ja-i">14エージェント</span></button>
+        <button class="suite-tab" data-tab="japan" onclick="switchSuiteTab('japan',this)"><span class="en-i">Japan Market</span><span class="ja-i">日本市場</span></button>
+        <button class="suite-tab" data-tab="pricing" onclick="switchSuiteTab('pricing',this)"><span class="en-i">Pricing</span><span class="ja-i">料金</span></button>
+      </div>
+    </div>
+    <div class="suite-body" id="suiteBody"><!-- filled by JS --></div>
+  </div>
+  <div style="text-align:center;margin-top:24px">
+    <a href="products.html" class="btn btn-ghost"><span class="en-i">View all products →</span><span class="ja-i">全製品を見る →</span></a>
+  </div>
+</div>
+</section>
+
+<!-- 3 KEY BENEFITS -->
+<div class="section-alt">
+<div class="section">
+<div class="container">
+  <div class="text-center">
+    <span class="section-eyebrow en-i" id="hpBenEyebrowEn">Why it works</span>
+    <span class="section-eyebrow ja-i" id="hpBenEyebrowJa">なぜ機能するのか</span>
+    <h2 class="section-title en reveal" id="hpBenTitleEn">Designed for how you actually work</h2>
+    <h2 class="section-title ja reveal" id="hpBenTitleJa">実際の働き方のために設計</h2>
+  </div>
+  <div class="grid grid-3">
+    <div class="card card-red-top reveal" data-hp-ben="0">
+      <div class="benefit-icon" style="background:var(--red-dim)" id="hpBen0Icon">🇯🇵</div>
+      <h3 class="en" id="hpBen0TitleEn">Japan-native from day one</h3><h3 class="ja" id="hpBen0TitleJa">最初から日本市場対応</h3>
+      <p style="font-size:13px;margin-top:8px" class="en" id="hpBen0DescEn">Keigo emails, nemawashi workflows, JPY pricing, Japanese company analysis — built in, not bolted on.</p>
+      <p style="font-size:13px;margin-top:8px" class="ja" id="hpBen0DescJa">敬語メール、根回しワークフロー、JPY価格設定 — 後付けではなく最初から組み込み済み。</p>
+    </div>
+    <div class="card reveal reveal-delay-1" data-hp-ben="1">
+      <div class="benefit-icon" style="background:var(--metal-dim)" id="hpBen1Icon">🧠</div>
+      <h3 class="en" id="hpBen1TitleEn">One shared memory — no repeating</h3><h3 class="ja" id="hpBen1TitleJa">共有メモリで説明不要</h3>
+      <p style="font-size:13px;margin-top:8px" class="en" id="hpBen1DescEn">COMPANY_BRAIN.md gives all 14 agents your ICP, pricing, and brand voice. Set it once, benefit forever.</p>
+      <p style="font-size:13px;margin-top:8px" class="ja" id="hpBen1DescJa">COMPANY_BRAIN.mdで14のエージェント全員がICP・価格・ブランドを共有。一度設定するだけ。</p>
+    </div>
+    <div class="card reveal reveal-delay-2" data-hp-ben="2">
+      <div class="benefit-icon" style="background:var(--red-dim)" id="hpBen2Icon">🔒</div>
+      <h3 class="en" id="hpBen2TitleEn">Privacy-first, one-time purchase</h3><h3 class="ja" id="hpBen2TitleJa">プライバシー優先・買い切り</h3>
+      <p style="font-size:13px;margin-top:8px" class="en" id="hpBen2DescEn">No subscription. No data storage. Conversations stay on your device. SOC2-backed Anthropic API.</p>
+      <p style="font-size:13px;margin-top:8px" class="ja" id="hpBen2DescJa">サブスク不要。データ保存なし。会話はデバイス上。SOC2認定Anthropic API使用。</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- HOW IT WORKS — 3 steps -->
+<section class="section">
+<div class="container" style="max-width:720px">
+  <div class="text-center">
+    <span class="section-eyebrow en-i">How it works</span>
+    <span class="section-eyebrow ja-i">使い方</span>
+    <h2 class="section-title en reveal" id="hpHowTitleEn">Up and running in 10 minutes</h2>
+    <h2 class="section-title ja reveal" id="hpHowTitleJa">10分で稼働開始</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg)" class="reveal">
+      <div class="process-num">1</div>
+      <div><h4 class="en" id="hpStep1TitleEn">Complete the 5-min wizard → get your COMPANY_BRAIN.md</h4><h4 class="ja" id="hpStep1TitleJa">5分間ウィザードを完了 → COMPANY_BRAIN.mdをダウンロード</h4>
+      <p style="font-size:13px;margin-top:5px" class="en" id="hpStep1DescEn">Answer 8 questions. The wizard generates your AI team's shared memory — ICP, pricing, brand voice all in one file.</p>
+      <p style="font-size:13px;margin-top:5px" class="ja" id="hpStep1DescJa">8つの質問に答えるだけ。ウィザードがAIチームの共有メモリを自動生成します。</p></div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg)" class="reveal reveal-delay-1">
+      <div class="process-num">2</div>
+      <div><h4 class="en" id="hpStep2TitleEn">Install 14 agents — double-click each .skill file</h4><h4 class="ja" id="hpStep2TitleJa">14エージェントをインストール — .skillファイルをダブルクリック</h4>
+      <p style="font-size:13px;margin-top:5px" class="en" id="hpStep2DescEn">All 14 agents install in 2 minutes in Claude Cowork. They instantly know your business context.</p>
+      <p style="font-size:13px;margin-top:5px" class="ja" id="hpStep2DescJa">Claude Coworkで2分でインストール完了。即座にビジネスコンテキストを把握します。</p></div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg)" class="reveal reveal-delay-2">
+      <div class="process-num">3</div>
+      <div><h4 class="en" id="hpStep3TitleEn">Talk naturally — type or speak in any language</h4><h4 class="ja" id="hpStep3TitleJa">自然に話しかける — テキストまたは音声、どの言語でも</h4>
+      <p style="font-size:13px;margin-top:5px" class="en" id="hpStep3DescEn">"Draft a proposal for Tanaka-san" → Sales agent responds with a keigo proposal in minutes. No commands to memorize.</p>
+      <p style="font-size:13px;margin-top:5px" class="ja" id="hpStep3DescJa">「田中さんへの提案書を作成して」→ セールスエージェントが数分で敬語の提案書を作成。コマンドの記憶不要。</p></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:28px">
+    <a href="products.html" class="btn btn-primary btn-lg"><span class="en-i">Get started for $97 →</span><span class="ja-i">$97で始める →</span></a>
+  </div>
+</div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<div class="section-alt">
+<div class="section">
+<div class="container" style="max-width:640px">
+  <div class="text-center">
+    <span class="section-eyebrow en-i">ROI Calculator</span>
+    <span class="section-eyebrow ja-i">ROI計算ツール</span>
+    <h2 class="section-title en reveal">Calculate your savings</h2>
+    <h2 class="section-title ja reveal">節約額を計算する</h2>
+  </div>
+  <div style="background:var(--card);border:1.5px solid var(--border2);border-radius:var(--r-xl);padding:28px;box-shadow:var(--s1)" id="roiCalc" class="reveal">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:22px">
+      <div>
+        <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);display:flex;justify-content:space-between">
+          <span class="en-i">Admin hours/week</span><span class="ja-i">週次管理業務</span>
+          <strong id="roiHoursVal" style="color:var(--text)">20h</strong>
+        </label>
+        <input type="range" style="-webkit-appearance:none;width:100%;height:5px;border-radius:3px;background:var(--bg3);outline:none;cursor:pointer;margin-top:10px" id="roiHours" min="5" max="40" value="20" step="5">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);display:flex;justify-content:space-between">
+          <span class="en-i">Your hourly rate</span><span class="ja-i">時間単価</span>
+          <strong id="roiRateVal" style="color:var(--text)">$50</strong>
+        </label>
+        <input type="range" style="-webkit-appearance:none;width:100%;height:5px;border-radius:3px;background:var(--bg3);outline:none;cursor:pointer;margin-top:10px" id="roiRate" min="20" max="200" value="50" step="10">
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px">
+      <div style="text-align:center;padding:14px;background:var(--bg2);border-radius:12px"><div style="font-size:24px;font-weight:800;color:var(--red);letter-spacing:-1px" id="roiHoursSaved">15h</div><div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-top:3px"><span class="en-i">Saved/week</span><span class="ja-i">週次節約</span></div></div>
+      <div style="text-align:center;padding:14px;background:var(--bg2);border-radius:12px"><div style="font-size:24px;font-weight:800;color:var(--red);letter-spacing:-1px" id="roiYearValue">$39K</div><div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-top:3px"><span class="en-i">Value/year</span><span class="ja-i">年間価値</span></div></div>
+      <div style="text-align:center;padding:14px;background:var(--bg2);border-radius:12px"><div style="font-size:24px;font-weight:800;color:var(--red);letter-spacing:-1px" id="roiPayback">4d</div><div style="font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;font-weight:600;margin-top:3px"><span class="en-i">Payback on $97</span><span class="ja-i">回収期間</span></div></div>
+    </div>
+    <a href="products.html" class="btn btn-primary btn-block" style="justify-content:center"><span class="en-i">Get started for $97 →</span><span class="ja-i">$97で始める →</span></a>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<div class="container">
+  <div class="text-center">
+    <span class="section-eyebrow en-i">Customer Stories</span>
+    <span class="section-eyebrow ja-i">お客様の声</span>
+    <h2 class="section-title en reveal" id="hpTestiTitleEn">Real results, real businesses</h2>
+    <h2 class="section-title ja reveal" id="hpTestiTitleJa">実際の成果</h2>
+  </div>
+  <div class="grid grid-3">
+    <div class="card reveal" style="border-top:2px solid var(--red)">
+      <div style="font-size:24px;color:var(--red);opacity:.4;font-family:Georgia,serif;line-height:1;margin-bottom:10px">"</div>
+      <p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:16px" class="en" id="hpTesti0QuoteEn">Proposal writing: 3 hours → 20 minutes. The Sales Agent writes perfect keigo — my Japanese clients can't tell the difference.</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:16px" class="ja" id="hpTesti0QuoteJa">提案書作成：3時間→20分。セールスエージェントが完璧な敬語で書いてくれます。</p>
+      <div style="display:flex;align-items:center;gap:9px;padding-top:14px;border-top:1px solid var(--border)">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--red-dim);display:flex;align-items:center;justify-content:center;font-size:14px" id="hpTesti0Avatar">🇻🇳</div>
+        <div><p style="font-size:12px;font-weight:700;color:var(--text)" id="hpTesti0Name">Minh N.</p><p style="font-size:11px;color:var(--text3)" id="hpTesti0Role">IT Consultant, Japan</p></div>
+        <div style="margin-left:auto;color:#D97706;font-size:12px">★★★★★</div>
+      </div>
+    </div>
+    <div class="card reveal reveal-delay-1">
+      <div style="font-size:24px;color:var(--red);opacity:.4;font-family:Georgia,serif;line-height:1;margin-bottom:10px">"</div>
+      <p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:16px" class="en" id="hpTesti1QuoteEn">The morning briefing alone is worth the price. I wake up knowing exactly what to focus on — pipeline, invoices, priorities.</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:16px" class="ja" id="hpTesti1QuoteJa">モーニングブリーフィングだけでも価格の価値があります。毎朝、何に集中すべきかが明確です。</p>
+      <div style="display:flex;align-items:center;gap:9px;padding-top:14px;border-top:1px solid var(--border)">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:14px" id="hpTesti1Avatar">🧘</div>
+        <div><p style="font-size:12px;font-weight:700;color:var(--text)" id="hpTesti1Name">Business Coach</p><p style="font-size:11px;color:var(--text3)" id="hpTesti1Role">Southeast Asia</p></div>
+        <div style="margin-left:auto;color:#D97706;font-size:12px">★★★★★</div>
+      </div>
+    </div>
+    <div class="card reveal reveal-delay-2">
+      <div style="font-size:24px;color:var(--red);opacity:.4;font-family:Georgia,serif;line-height:1;margin-bottom:10px">"</div>
+      <p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:16px" class="en" id="hpTesti2QuoteEn">Legal Agent flagged 3 dangerous contract clauses before I signed. Saved me from a deal I would have deeply regretted.</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:16px" class="ja" id="hpTesti2QuoteJa">Legal Agentが署名前に3つの危険な条項を発見。後悔するような契約を回避できました。</p>
+      <div style="display:flex;align-items:center;gap:9px;padding-top:14px;border-top:1px solid var(--border)">
+        <div style="width:36px;height:36px;border-radius:50%;background:var(--red-dim);display:flex;align-items:center;justify-content:center;font-size:14px" id="hpTesti2Avatar">💼</div>
+        <div><p style="font-size:12px;font-weight:700;color:var(--text)" id="hpTesti2Name">David T.</p><p style="font-size:11px;color:var(--text3)" id="hpTesti2Role">DX Advisor, Tokyo</p></div>
+        <div style="margin-left:auto;color:#D97706;font-size:12px">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<div style="background:var(--dark);padding:64px 0">
+<div class="container" style="text-align:center">
+  <span class="section-eyebrow" style="color:#EF5350">Get started</span>
+  <h2 class="en reveal" id="hpCtaH2En" style="color:#FAF9F7;margin-bottom:12px">Your AI team is ready.<br>Setup takes 10 minutes.</h2>
+  <h2 class="ja reveal" id="hpCtaH2Ja" style="color:#FAF9F7;margin-bottom:12px">AIチームが待っています。<br>セットアップは10分です。</h2>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px" class="reveal">
+    <a href="products.html" class="btn btn-primary btn-xl" id="hpCtaBtn1"><span class="en-i" id="hpCtaBtn1En">Browse Products →</span><span class="ja-i" id="hpCtaBtn1Ja">製品を見る →</span></a>
+    <a href="contact.html" class="btn btn-xl" id="hpCtaBtn2" style="background:var(--dark3);border:1.5px solid var(--dark-border);color:#FAF9F7"><span class="en-i" id="hpCtaBtn2En">Book Free Consultation</span><span class="ja-i" id="hpCtaBtn2Ja">無料相談を予約</span></a>
+  </div>
+  <p style="font-size:12px;color:#57534E;margin-top:16px" class="en-i" id="hpCtaDisclEn">30-day money-back guarantee · No server needed · 3 languages</p>
+  <p style="font-size:12px;color:#57534E;margin-top:16px" class="ja-i" id="hpCtaDisclJa">30日間返金保証 · サーバー不要 · 3言語対応</p>
+</div>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+// Product Suite Tabs Data
+var SUITE_DATA = {
+  overview: {
+    en: { icon:'🤖', title:'Solo Business AI', body: '<p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:24px">The complete AI operating system for solopreneurs. 14 specialized agents replace 5-7 scattered tools — working in Japanese, English, and Vietnamese without a server or subscription.</p><div class="suite-feature-grid"><div class="suite-feature"><div class="suite-feature-icon">🧠</div><div><h4>Shared company memory</h4><p>All 14 agents know your ICP, pricing, and brand voice from one COMPANY_BRAIN.md file.</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🌅</div><div><h4>Automated morning brief</h4><p>Daily 7am digest of pipeline, invoices, and priorities — delivered automatically.</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🎤</div><div><h4>Voice + text input</h4><p>Speak or type in any language. The chatbot routes to the right agent automatically.</p></div></div><div class="suite-feature"><div class="suite-feature-icon">📊</div><div><h4>Built-in ROI tracking</h4><p>Log every AI task. See your time saved and value created as a monthly report.</p></div></div></div>' },
+    ja: { icon:'🤖', title:'Solo Business AI', body: '<p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:24px">ソロプレナーのための完全なAIオペレーティングシステム。14の専門エージェントが5〜7のバラバラなツールを置き換え、日本語・英語・ベトナム語で動作します。サーバー不要。</p><div class="suite-feature-grid"><div class="suite-feature"><div class="suite-feature-icon">🧠</div><div><h4>共有メモリ</h4><p>1つのCOMPANY_BRAIN.mdから14のエージェント全員がICP・価格・ブランドを把握。</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🌅</div><div><h4>毎朝の自動ブリーフィング</h4><p>毎朝7時にパイプライン・請求書・優先事項のダイジェストを自動配信。</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🎤</div><div><h4>音声+テキスト入力</h4><p>どの言語でも話しかけるだけ。チャットボットが自動的に最適なエージェントに振り分け。</p></div></div><div class="suite-feature"><div class="suite-feature-icon">📊</div><div><h4>ROIトラッキング内蔵</h4><p>AIタスクを記録し、節約時間と創出価値を月次レポートで確認。</p></div></div></div>' }
+  },
+  agents: {
+    en: { icon:'🤖', title:'14 Specialized Agents', body: '<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">'+[['🔍','AI Researcher','Market research, competitor analysis, ICP definition'],['🎯','AI Strategist','GTM plans, OKRs, pricing, positioning'],['✍️','AI Copywriter','Emails, landing pages, ads, LinkedIn content'],['💼','AI Sales Assistant','Proposals, follow-ups, lead scoring'],['🛠️','AI Product Builder','Code, MVPs, automation scripts'],['💬','AI Customer Support','FAQ, onboarding, complaint handling'],['📊','AI Analyst','KPIs, funnel analysis, LTV/CAC'],['🗂️','AI Admin','Calendars, invoices, meeting notes'],['💰','AI Finance Manager','Cashflow, tax planning, runway'],['🧘','AI Business Coach','Weekly reflection, burnout, goals'],['⚖️','AI Legal Assistant','Contract review, NDA, risk'],['🤝','AI Partnership Mgr','Referral programs, JV proposals'],['📢','AI Brand Manager','LinkedIn strategy, reputation'],['🌅','Morning Briefing','Auto-runs 7am — daily digest']].map(function(a){return '<div class="suite-feature"><div class="suite-feature-icon">'+a[0]+'</div><div><h4>'+a[1]+'</h4><p>'+a[2]+'</p></div></div>';}).join('')+'</div>' },
+    ja: { icon:'🤖', title:'14の専門エージェント', body: '<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px">'+[['🔍','AIリサーチャー','市場調査、競合分析、ICP定義'],['🎯','AIストラテジスト','GTMプラン、OKR、価格戦略'],['✍️','AIコピーライター','メール、LP、広告、LinkedIn'],['💼','AIセールスアシスタント','提案書、フォローアップ'],['🛠️','AIプロダクトビルダー','コード、MVP、自動化スクリプト'],['💬','AIカスタマーサポート','FAQ、オンボーディング'],['📊','AIアナリスト','KPI、ファネル分析、LTV/CAC'],['🗂️','AIアドミン','カレンダー、請求書、議事録'],['💰','AIファイナンスマネージャー','キャッシュフロー、税務'],['🧘','AIビジネスコーチ','週次振り返り、バーンアウト'],['⚖️','AI法務アシスタント','契約書レビュー、NDA'],['🤝','AIパートナーシップ','紹介プログラム、JV提案'],['📢','AIブランドマネージャー','LinkedIn戦略、レピュテーション'],['🌅','Morning Briefing','毎朝7時自動実行']].map(function(a){return '<div class="suite-feature"><div class="suite-feature-icon">'+a[0]+'</div><div><h4>'+a[1]+'</h4><p>'+a[2]+'</p></div></div>';}).join('')+'</div>' }
+  },
+  japan: {
+    en: { icon:'🏯', title:'Japan Market Features', body: '<p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:22px">The only AI suite built specifically for the Japanese business market.</p><div class="suite-feature-grid"><div class="suite-feature"><div class="suite-feature-icon">🗣️</div><div><h4>Keigo (敬語) support</h4><p>All communication agents write proper formal Japanese with correct honorifics — no awkward machine translation.</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🔄</div><div><h4>Nemawashi workflow (根回し)</h4><p>Sales agent understands the Japanese consensus-building process. Guides you through proper stakeholder sequencing.</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🏭</div><div><h4>Japan DX Analyzer add-on</h4><p>Analyze Japanese companies\' digitalization readiness. Generate proposals with correct business context.</p></div></div><div class="suite-feature"><div class="suite-feature-icon">💴</div><div><h4>JPY pricing & tax</h4><p>Finance agent handles JPY pricing, consumption tax calculations, and Japanese invoice formatting.</p></div></div></div>' },
+    ja: { icon:'🏯', title:'日本市場対応機能', body: '<p style="font-size:14px;line-height:1.75;color:var(--text2);margin-bottom:22px">日本のビジネス市場のために特化設計された唯一のAIスイートです。</p><div class="suite-feature-grid"><div class="suite-feature"><div class="suite-feature-icon">🗣️</div><div><h4>敬語サポート</h4><p>すべてのコミュニケーションエージェントが適切な敬語で正確な日本語を書きます。</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🔄</div><div><h4>根回しワークフロー</h4><p>セールスエージェントが日本のコンセンサス形成プロセスを理解。適切なステークホルダー順序をガイド。</p></div></div><div class="suite-feature"><div class="suite-feature-icon">🏭</div><div><h4>Japan DX Analyzer連携</h4><p>日本企業のデジタル化準備度を分析。正確なビジネスコンテキストで提案書を生成。</p></div></div><div class="suite-feature"><div class="suite-feature-icon">💴</div><div><h4>JPY価格・税務対応</h4><p>財務エージェントがJPY価格設定、消費税計算、日本の請求書フォーマットを処理。</p></div></div></div>' }
+  },
+  pricing: {
+    en: { icon:'💰', title:'Simple Pricing', body: '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"><div style="border:2px solid var(--red);border-radius:14px;padding:22px;position:relative"><div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;padding:2px 12px;border-radius:10px;font-size:10px;font-weight:700">BESTSELLER</div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:8px">Starter Kit</div><div style="font-size:28px;font-weight:800;margin-bottom:4px">$97<span style="font-size:13px;font-weight:400;color:var(--text3)"> one-time</span></div><p style="font-size:12px;color:var(--text2);margin-bottom:14px">14 agents + chatbot + onboarding wizard. Up in 10 minutes.</p><a href="products.html" class="btn btn-primary btn-sm btn-block" style="justify-content:center">Get started →</a></div><div style="border:1px solid var(--border2);border-radius:14px;padding:22px"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:8px">Done-for-you</div><div style="font-size:28px;font-weight:800;margin-bottom:4px">$497<span style="font-size:13px;font-weight:400;color:var(--text3)"> one-time</span></div><p style="font-size:12px;color:var(--text2);margin-bottom:14px">We configure everything + 1:1 onboarding + 30-day support.</p><a href="contact.html" class="btn btn-secondary btn-sm btn-block" style="justify-content:center">Book a call →</a></div><div style="border:1px solid var(--border2);border-radius:14px;padding:22px"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:8px">Agency / Resell</div><div style="font-size:28px;font-weight:800;margin-bottom:4px">$997<span style="font-size:13px;font-weight:400;color:var(--text3)">+rev share</span></div><p style="font-size:12px;color:var(--text2);margin-bottom:14px">White-label rights + custom branding + reseller support.</p><a href="contact.html" class="btn btn-secondary btn-sm btn-block" style="justify-content:center">Contact us →</a></div></div><p style="font-size:12px;color:var(--text3);text-align:center;margin-top:16px">All plans include 30-day money-back guarantee · Requires Anthropic API key (~$10-30/month)</p>' },
+    ja: { icon:'💰', title:'シンプルな料金設定', body: '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"><div style="border:2px solid var(--red);border-radius:14px;padding:22px;position:relative"><div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;padding:2px 12px;border-radius:10px;font-size:10px;font-weight:700">人気No.1</div><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:8px">スターターキット</div><div style="font-size:28px;font-weight:800;margin-bottom:4px">$97<span style="font-size:13px;font-weight:400;color:var(--text3)"> 買い切り</span></div><p style="font-size:12px;color:var(--text2);margin-bottom:14px">14エージェント+チャットボット+ウィザード。10分で稼働。</p><a href="products.html" class="btn btn-primary btn-sm btn-block" style="justify-content:center">始める →</a></div><div style="border:1px solid var(--border2);border-radius:14px;padding:22px"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:8px">導入代行</div><div style="font-size:28px;font-weight:800;margin-bottom:4px">$497<span style="font-size:13px;font-weight:400;color:var(--text3)"> 買い切り</span></div><p style="font-size:12px;color:var(--text2);margin-bottom:14px">全設定代行+1on1オンボーディング+30日サポート。</p><a href="contact.html" class="btn btn-secondary btn-sm btn-block" style="justify-content:center">相談する →</a></div><div style="border:1px solid var(--border2);border-radius:14px;padding:22px"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text3);margin-bottom:8px">エージェンシー</div><div style="font-size:28px;font-weight:800;margin-bottom:4px">$997<span style="font-size:13px;font-weight:400;color:var(--text3)">+収益シェア</span></div><p style="font-size:12px;color:var(--text2);margin-bottom:14px">ホワイトラベル権限+カスタムブランディング。</p><a href="contact.html" class="btn btn-secondary btn-sm btn-block" style="justify-content:center">詳細を聞く →</a></div></div><p style="font-size:12px;color:var(--text3);text-align:center;margin-top:16px">全プラン30日間返金保証 · Anthropic APIキーが必要（月10〜30ドル程度）</p>' }
+  }
+};
+
+// Admin-configurable featured product ID (re-read via Store when needed)
+var FEATURED_PRODUCT_ID = 1;
+var currentSuiteTab = 'overview';
+var currentSuiteLang = (localStorage.getItem('nova_lang') || 'en');
+
+function switchSuiteTab(tab, btn) {
+  currentSuiteTab = tab;
+  document.querySelectorAll('.suite-tab').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderSuiteBody();
+}
+
+function renderSuiteBody() {
+  var lang = document.body.classList.contains('lang-ja') ? 'ja' : 'en';
+  var data = SUITE_DATA[currentSuiteTab];
+  if (!data) return;
+  var d = data[lang] || data.en;
+  document.getElementById('suiteBody').innerHTML = d.body;
+}
+
+function onLangChange(l) {
+  renderSuiteBody();
+}
+
+
+// ──────────────────────────────────────────────────────────────
+// Homepage content override from Admin (miraio_homepage)
+// ──────────────────────────────────────────────────────────────
+function applyHP() {
+  var hp = {};
+  try { hp = JSON.parse(localStorage.getItem('miraio_homepage') || '{}'); } catch(e) { return; }
+  function set(id, val, isHTML) {
+    var el = document.getElementById(id);
+    if (el && val !== undefined && val !== '') {
+      if (isHTML) el.innerHTML = val; else el.textContent = val;
+    }
+  }
+  function setHref(id, url) {
+    var el = document.getElementById(id);
+    if (el && url) el.href = url;
+  }
+  var h = hp.hero || {};
+  set('hpBadgeEn', h.badge_en); set('hpBadgeJa', h.badge_ja);
+  set('hpH1En', h.h1_en, true); set('hpH1Ja', h.h1_ja, true);
+  set('hpSubEn', h.sub_en); set('hpSubJa', h.sub_ja);
+  set('hpBtn1En', h.btn1_en); set('hpBtn1Ja', h.btn1_ja); setHref('hpBtn1', h.btn1_url);
+  set('hpBtn2En', h.btn2_en); set('hpBtn2Ja', h.btn2_ja); setHref('hpBtn2', h.btn2_url);
+  var stats = h.stats || [];
+  for (var i = 0; i < 4; i++) {
+    var s = stats[i] || {};
+    set('hpStat'+(i+1)+'Num', s.num);
+    set('hpStat'+(i+1)+'LblEn', s.lbl_en);
+    set('hpStat'+(i+1)+'LblJa', s.lbl_ja);
+  }
+  // ── Benefits section heading ──────────────────────────────────
+  var benSec = hp.benSection || {};
+  set('hpBenEyebrowEn', benSec.eyebrow_en); set('hpBenEyebrowJa', benSec.eyebrow_ja);
+  set('hpBenTitleEn', benSec.title_en); set('hpBenTitleJa', benSec.title_ja);
+
+  // ── Benefit cards ─────────────────────────────────────────────
+  var ben = hp.benefits || [];
+  for (var i = 0; i < 3; i++) {
+    var b = ben[i] || {};
+    set('hpBen'+i+'Icon', b.icon);
+    set('hpBen'+i+'TitleEn', b.title_en); set('hpBen'+i+'TitleJa', b.title_ja);
+    set('hpBen'+i+'DescEn', b.desc_en); set('hpBen'+i+'DescJa', b.desc_ja);
+  }
+
+  // ── Suite section header ──────────────────────────────────────
+  var ss = hp.suiteSection || {};
+  set('suiteHeading', ss.heading_en); set('suiteHeadingJa', ss.heading_ja);
+  set('suiteSubtitle', ss.subtitle_en); set('suiteSubtitleJa', ss.subtitle_ja);
+
+  // ── Suite tab bodies & titles ─────────────────────────────────
+  var sd = hp.suiteData || {};
+  ['overview','agents','japan','pricing'].forEach(function(tab) {
+    var t = sd[tab] || {};
+    // Override body HTML in SUITE_DATA (used by renderSuiteBody)
+    if (t.body_en) { if (!SUITE_DATA[tab]) SUITE_DATA[tab] = {}; if (!SUITE_DATA[tab].en) SUITE_DATA[tab].en = {}; SUITE_DATA[tab].en.body = t.body_en; }
+    if (t.body_ja) { if (!SUITE_DATA[tab].ja) SUITE_DATA[tab].ja = {}; SUITE_DATA[tab].ja.body = t.body_ja; }
+    // Update tab button labels
+    if (t.title_en) { var btnEn = document.querySelector('.suite-tab[data-tab="'+tab+'"] .en-i'); if (btnEn) btnEn.textContent = t.title_en; }
+    if (t.title_ja) { var btnJa = document.querySelector('.suite-tab[data-tab="'+tab+'"] .ja-i'); if (btnJa) btnJa.textContent = t.title_ja; }
+  });
+
+  // ── How it works ──────────────────────────────────────────────
+  var how = hp.how || {};
+  set('hpHowTitleEn', how.title_en); set('hpHowTitleJa', how.title_ja);
+  var steps = how.steps || [];
+  for (var i = 0; i < 3; i++) {
+    var st = steps[i] || {};
+    set('hpStep'+(i+1)+'TitleEn', st.title_en); set('hpStep'+(i+1)+'TitleJa', st.title_ja);
+    set('hpStep'+(i+1)+'DescEn', st.desc_en); set('hpStep'+(i+1)+'DescJa', st.desc_ja);
+  }
+
+  // ── Testimonials section title ────────────────────────────────
+  var testiSec = hp.testiSection || {};
+  set('hpTestiTitleEn', testiSec.title_en); set('hpTestiTitleJa', testiSec.title_ja);
+
+  // ── Testimonial cards ─────────────────────────────────────────
+  var testi = hp.testimonials || [];
+  for (var i = 0; i < 3; i++) {
+    var t = testi[i] || {};
+    set('hpTesti'+i+'QuoteEn', t.quote_en); set('hpTesti'+i+'QuoteJa', t.quote_ja);
+    set('hpTesti'+i+'Name', t.name); set('hpTesti'+i+'Role', t.role);
+    set('hpTesti'+i+'Avatar', t.avatar);
+  }
+
+  // ── Bottom CTA ────────────────────────────────────────────────
+  var cta = hp.cta || {};
+  set('hpCtaH2En', cta.h2_en, true); set('hpCtaH2Ja', cta.h2_ja, true);
+  set('hpCtaBtn1En', cta.btn1_en); set('hpCtaBtn1Ja', cta.btn1_ja); setHref('hpCtaBtn1', cta.btn1_url);
+  set('hpCtaBtn2En', cta.btn2_en); set('hpCtaBtn2Ja', cta.btn2_ja); setHref('hpCtaBtn2', cta.btn2_url);
+  set('hpCtaDisclEn', cta.discl_en); set('hpCtaDisclJa', cta.discl_ja);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  applyHP();
+  renderProductGrid('featuredProducts', 'all', 4);
+  renderSuiteBody();
+});
+</script>
+<script src="assets/app.js" defer></script>
+<script src="assets/nav.js" defer></script>
+</body>
+</html>
